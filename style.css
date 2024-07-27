@@ -1,0 +1,121 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #d3ab77;
+}
+
+#bar-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 0.2vh;
+    height: 300px; 
+    width: 100%;
+}
+
+.bar {
+    width: 30px;
+    margin: 0 5px;
+    background-color: #2397e4;
+    color: rgb(59, 54, 54);
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.bar span{
+    position: absolute;
+    top: -4vh;
+    left: 6%;
+    width: 3vh;
+    background-color: rgb(185, 83, 6);
+    color: whitesmoke;
+    padding: 10%;
+    border-radius: 50%;
+}
+
+.highlight {
+    background-color: rgb(131, 10, 10);
+}
+
+.found {
+    background-color: rgb(14, 173, 14);
+}
+
+.input-container{
+    margin-top: 5vh;
+}
+
+.input-container input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.generate-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 5vh;
+}
+
+.generate-button:hover {
+    background-color: #2980b9;
+}
+
+.low_index::after {
+    content: '↓ low';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -75px;
+    font-size: 16px;
+    color: blue;
+}
+
+.high_index::after {
+    content: '↓ high';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -75px;
+    font-size: 16px;
+    color: red;
+}
+
+.mid::before{
+    content: '[mid]';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(30, 28, 28);
+}
